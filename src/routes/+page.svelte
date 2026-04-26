@@ -48,6 +48,11 @@
   <div class="title-block">
     <h1 class="vt-title">{TITLE}</h1>
     <p class="sub">A book in {flat.length} sections.</p>
+
+    <div class="tldr">
+      <div class="tldr-label">TL;DR — start your own</div>
+      <pre class="tldr-cmd"><code>npm create sveltekitbook@latest my-book</code></pre>
+    </div>
   </div>
 
   <div class="meta bottom">
@@ -131,6 +136,40 @@
     margin-top: 1.6rem;
     max-width: 52ch;
     line-height: 1.4;
+  }
+
+  .tldr {
+    margin-top: 2.2rem;
+    max-width: 56ch;
+  }
+  .tldr-label {
+    font-family: var(--sans);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    color: var(--muted);
+    margin-bottom: 0.55rem;
+  }
+  .tldr-cmd {
+    margin: 0;
+    padding: 0.85rem 1rem;
+    background: #14110d;
+    color: #f3eee5;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: clamp(0.82rem, 1.05vw, 0.98rem);
+    line-height: 1.4;
+    border-radius: 2px;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  .tldr-cmd code {
+    font-family: inherit;
+    color: inherit;
+    background: transparent;
+  }
+  .tldr-cmd::before {
+    content: '$ ';
+    color: rgba(243, 238, 229, 0.5);
   }
 
   button {
